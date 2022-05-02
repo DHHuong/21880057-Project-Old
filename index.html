@@ -6,32 +6,35 @@
   <!-- Required meta tags -->
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
+  <link rel="stylesheet" href="css21880057.css">
   <!-- Bootstrap CSS -->
   <link rel="stylesheet" href="css/bootstrap.min.css">
   <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Changa+One" type="text/css">
 </head>
 
 <body>
   <!--Header Website-->
   <header class="container">
-    <nav class="navbar navbar-expand-sm navbar-light bg-light">
-      <a class="navbar-brand" href="#">
+    <nav class="navbar navbar-expand-sm navbar-light px-0">
+      <a class="navbar-brand" href="index.html" id="logo">
         <img src="images/logo.png" alt="">
       </a>
-      <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse" data-target="#collapsibleNavId"
-        aria-controls="collapsibleNavId" aria-expanded="false" aria-label="Toggle navigation">
+      <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse" data-target="#menu"
+        aria-controls="menu" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
-      <div class="collapse navbar-collapse" id="collapsibleNavId">
-        <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+      <div class="collapse navbar-collapse justify-content-end" id="menu">
+        <ul class="navbar-nav mt-2 mt-lg-0">
           <li class="nav-item active">
-            <a class="nav-link" href="index.html">Home<span class="sr-only">(current)</span></a>
+            <a class="nav-link" href="index.html">Home
+              <span class="sr-only">(current)</span>
+            </a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="about.html">About</a>
           </li>
-          <li class="nav-item active">
+          <li class="nav-item">
             <a class="nav-link" href="menu.html">Menu</a>
           </li>
           <li class="nav-item">
@@ -41,191 +44,208 @@
             <a class="nav-link" href="contacts.html">Contacts</a>
           </li>
         </ul>
-        <form class="form-inline my-2 my-lg-0">
-          <input class="form-control mr-sm-2" type="text" placeholder="Search">
-          <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+        <form class="form-inline my-2 my-lg-0" id="frm-search" onsubmit="return search(this.searchword.value);">
+          <div class="input-group input-group-sm">
+            <input class="form-control" type="text" placeholder="Search" id="searchword">
+            <div class="input-group-append">
+              <button class="btn" type="submit" id="btn-search">
+                <img src="images/search_button.png" alt="">
+              </button>
+            </div>
+          </div>
         </form>
-        <a href="https://twitter.com/?lang=vi"><img src="images/twitter.png" alt="Twitter"></a>
-        <a href="https://vi-vn.facebook.com/"><img src="images/facebook.png" alt="Facebook"></a>
+        <div id="social">
+          <a href="#" class="btn twitter">
+              <img src="images/twitter.png" alt="">
+          </a>
+          <a href="#" class="btn facebook">
+            <img src="images/facebook.png" alt="">
+          </a>
+        </div>
       </div>
     </nav>
   </header>
 
   <!--Banner-->
-  <div class="container-fluid" id="banner">
-    <div class="container text-center">
-      <h4 class="text-white">Tasty cakes and ice-cream
-        <br />for everyone
-      </h4>
-      <div>
-        <a id="btn-menu" href="menu.html">see our menu</a>
+  <div class="container-fluid" id="small-banner" style="visibility:hidden"> </div>
+  <div id="content" class="pb-3">
+    <div class="container-fluid" id="banner">
+      <div class="container text-center">
+        <h4 class="text-white">Tasty cakes and ice-cream
+          <br>for everyone
+        </h4>
+        <div>
+          <a id="btn-menu" href="menu.html">see our menu</a>
+        </div>
+        <ul id="dots">
+          <li class="current">
+            <span>0</span>
+          </li>
+          <li>
+            <span>1</span>
+          </li>
+          <li>
+            <span>2</span>
+          </li>
+        </ul>
       </div>
-      <ul id="dots">
-        <li class="current">
-          <span>0</span>
-        </li>
-        <li>
-          <span>1</span>
-        </li>
-        <li>
-          <span>2</span>
-        </li>
-      </ul>
     </div>
-  </div>
 
-  <!--Main-->
-  <div class="container" id="products">
-    <div class="row">
-      <div class="col-md-3 col-sm-6 text-center">
-        <img src="images/icon-1.png" alt="">
-        <h4>Coffee</h4>
-        <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
-        <a href="#">Read more</a>
-      </div>
-      <div class="col-md-3 col-sm-6 text-center">
-        <img src="images/icon-2.png" alt="">
-        <h4>Coffee</h4>
-        <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
-        <a href="#">Read more</a>
-      </div>
-      <div class="col-md-3 col-sm-6 text-center">
-        <img src="images/icon-3.png" alt="">
-        <h4>Coffee</h4>
-        <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
-        <a href="#">Read more</a>
-      </div>
-      <div class="col-md-3 col-sm-6 text-center">
-        <img src="images/icon-4.png" alt="">
-        <h4>Coffee</h4>
-        <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
-        <a href="#">Read more</a>
+    <!--Main-->
+    <div class="container" id="products">
+      <div class="row my-5">
+        <div class="col text-center">
+          <img src="images/icon-1.png" alt="">
+          <h4>Coffee</h4>
+          <div class="pb-2">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</div>
+          <a class="readmore" href="#" onclick="loadProduct(1)">Read more</a>
+        </div>
+        <div class="col text-center">
+          <img src="images/icon-2.png" alt="">
+          <h4>Drinks</h4>
+          <div class="pb-2">Cumque necessitatibus eos, pariatur quasi suscipit fugit porro?</div>
+          <a class="readmore" href="#" onclick="loadProduct(2)">Read more</a>
+        </div>
+        <div class="col text-center">
+          <img src="images/icon-3.png" alt="">
+          <h4>Cakes</h4>
+          <div class="pb-2">Pariatur saepe, libero nulla culpa reiciendis labore unde.</div>
+          <a class="readmore" href="#" onclick="loadProduct(3)">Read more</a>
+        </div>
+        <div class="col text-center">
+          <img src="images/icon-4.png" alt="">
+          <h4>Ice-creams</h4>
+          <div class="pb-2">Voluptas asperiores modi, quae animi consequatur quasi unde?</div>
+          <a class="readmore" href="#" onclick="loadProduct(4)">Read more</a>
+        </div>
       </div>
     </div>
-  </div>
-  
-  <!--About us-->
-  <div class="container-fluid about py-4">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-9">
-          <h3 class="text-white">About Us</h3>
-          <div>
-            <img src="images/icon-about.png" alt="">
-            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Reprehenderit cupiditate earum unde, itaque
-              vel, iste quasi magnam saepe ex animi voluptatibus commodi amet dolor natus a doloremque nostrum culpa
-              perspiciatis?</p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis repellat rerum reiciendis corporis esse
-              quae eveniet animi obcaecati beatae ex.
-              <a class="readmore" href="about.html">Read more</a>
-            </p>
+
+    <!--About us-->
+    <div class="container-fluid about py-4">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-9">
+            <h3 class="text-white">About Us</h3>
+            <div>
+              <img src="images/icon-about.png" alt="">
+              <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Reprehenderit cupiditate earum unde, itaque
+                vel, iste quasi magnam saepe ex animi voluptatibus commodi amet dolor natus a doloremque nostrum culpa
+                perspiciatis?</p>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis repellat rerum reiciendis corporis
+                esse
+                quae eveniet animi obcaecati beatae ex.
+                <a class="readmore" href="about.html">Read more</a>
+              </p>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <form action="post" id="frm-signup"
+              onsubmit="window.alert('Thank you for your submission!'); return false;">
+              <h3>Newsletter
+                <br />Sign Up
+              </h3>
+              <div>Please, write an e-mail:</div>
+              <div>
+                <input type="email" name="email" id="email" required>
+              </div>
+              <button type="submit">SIGN UP</button>
+            </form>
           </div>
         </div>
-        <div class="col-md-3">
-          <form action="post" id="frm-signup" onsubmit="window.alert('Thank you for your submission!'); return false;">
-            <h3>Newsletter
-              <br />Sign Up
-            </h3>
-            <div>Please, write an e-mail:</div>
-            <div>
-              <input type="email" name="email" id="email" required>
-            </div>
-            <button type="submit">SIGN UP</button>
-          </form>
-        </div>
       </div>
     </div>
-  </div>
 
-  <!--News-->
-  <div class="container py-5" id="news">
-    <h3>News</h3>
-    <div class="row">
-      <div class="col">
-        <div>
-          <div>25.<br />Dec.</div>
-          <a href="#">Read more</a>
+    <!--News-->
+    <div class="container py-5" id="news">
+      <h3>News</h3>
+      <div class="row">
+        <div class="col">
+          <div>
+            <div>25.<br />Dec.</div>
+            <a href="#">Read more</a>
+          </div>
+          <div>
+            <div>Accumsan et</div>
+            <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+          </div>
         </div>
-        <div>
-          <div>Accumsan et</div>
-          <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+        <div class="col">
+          <div>
+            <div>25.<br />Dec.</div>
+            <a href="#">Read more</a>
+          </div>
+          <div>
+            <div>Typi non habent</div>
+            <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+          </div>
         </div>
-      </div>
-      <div class="col">
-        <div>
-          <div>25.<br />Dec.</div>
-          <a href="#">Read more</a>
+        <div class="col">
+          <div>
+            <div>25.<br />Dec.</div>
+            <a href="#">Read more</a>
+          </div>
+          <div>
+            <div>Claritas est etiam</div>
+            <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+          </div>
         </div>
-        <div>
-          <div>Typi non habent</div>
-          <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
-        </div>
-      </div>
-      <div class="col">
-        <div>
-          <div>25.<br />Dec.</div>
-          <a href="#">Read more</a>
-        </div>
-        <div>
-          <div>Claritas est etiam</div>
-          <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
-        </div>
-      </div>
 
+      </div>
     </div>
-  </div>
-  
-  <!--Footer-->
-  <footer class="container-fluid">
-    <nav>
-      <ul>
-        <li class="active">
-          <a href="index.html">Home</a>
-        </li>
-        <li>
-          <a href="about.html">About</a>
-        </li>
-        <li>
-          <a href="menu.html">Menu</a>
-        </li>
-        <li>
-          <a href="blog.html">Blog</a>
-        </li>
-        <li>
-          <a href="contacts.html">Contacts</a>
-        </li>
-      </ul>
-    </nav>
-    <div>
-      Ice-cream &copy; 2022 |
-      <a href="#" class="text-uppercase">Privacy policy</a>
-    </div>
-  </footer>
-  
-  <!-- Optional JavaScript -->
-  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-  <script src="js/jquery-3.3.1.min.js"></script>
-  <script src="js/popper.js/1.14.7/umd/popper.min.js"></script>
-  <script src="js/bootstrap.min.js"></script>
 
-  <script src="js/handlebars.runtime-v4.1.0.js"></script>
-  <script src="js/templates.js"></script>
+    <!--Footer-->
+    <footer class="container-fluid">
+      <nav>
+        <ul>
+          <li class="active">
+            <a href="index.html">Home</a>
+          </li>
+          <li>
+            <a href="about.html">About</a>
+          </li>
+          <li>
+            <a href="menu.html">Menu</a>
+          </li>
+          <li>
+            <a href="blog.html">Blog</a>
+          </li>
+          <li>
+            <a href="contacts.html">Contacts</a>
+          </li>
+        </ul>
+      </nav>
+      <div>
+        Ice-cream &copy; 2022 |
+        <a href="#" class="text-uppercase">Privacy policy</a>
+      </div>
+    </footer>
 
-  <script src="js/21880057.js"></script>
-  <script>
-    $(document).ready(function () {
-      loadDetails("products");
-      loadDetails("news");
-    });
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
 
-    function loadNew(id) {
-      loadDetails(`news/${id}`, 'content', 'index-details');
-    }
+    <script src="js/handlebars.runtime-v4.1.0.js"></script>
+    <script src="js/templates.js"></script>
 
-    function loadProduct(id) {
-      loadDetails(`products/${id}`, 'content', 'index-details');
-    }
-  </script>
+    <script src="js/21880057.js"></script>
+    <script>
+      $(document).ready(function () {
+        loadDetails("products");
+        loadDetails("news");
+      });
+
+      function loadNew(id) {
+        loadDetails(`news/${id}`, 'content', 'index-details');
+      }
+
+      function loadProduct(id) {
+        loadDetails(`products/${id}`, 'content', 'index-details');
+      }
+    </script>
+    
 </body>
 
 </html>
