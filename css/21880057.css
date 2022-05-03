@@ -137,8 +137,7 @@ body {
 
 
 /* main */
-
-h4 {
+#products h4 {
     font-family: 'Changa One', cursive;
     font-weight: 400;
     color: #333333;
@@ -159,7 +158,7 @@ a.readmore {
     color: #814E64;
 }
 
-h3 {
+div h3 {
     font-family: 'Changa One', cursive;
     color: #7C7C7C;
     font-weight: 400;
